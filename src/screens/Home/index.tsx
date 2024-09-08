@@ -1,8 +1,9 @@
-import { Alert, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, FlatList, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { useState } from "react";
+import { Task } from "../../components/Task";
 
 export function Home() {
 
@@ -18,6 +19,19 @@ export function Home() {
         setTaskName('');
     }
 
+    function handleTaskRemove(name: string) {
+        Alert.alert("Remover", `Deseja remover a tarefa ${name}?`, [
+            {
+                text: 'Sim',
+                onPress: () => setTasks(prevState => prevState.filter(task => task != name))
+            },
+            {
+                text: 'Não',
+                style: 'cancel'
+            }
+        ]);
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.containerBlue}>
@@ -29,11 +43,31 @@ export function Home() {
                     style={styles.input}
                     placeholder="Adicione uma nova tarefa"
                     placeholderTextColor={"#404040"}
+                    keyboardType="default"
+                    onChangeText={setTaskName}
+                    value={taskName}
                 ></TextInput>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button}
+                    onPress={handleTaskAdd}>
                     <AntDesign name="pluscircleo" size={18} color="#fff" />
                 </TouchableOpacity>
             </View>
+
+            <FlatList
+                data={tasks}
+                keyExtractor={item => item}
+                renderItem={({ item }) => (
+                    <Task name={item} onRemove={() => handleTaskRemove(item)}>
+                    </Task>
+                )}
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={tasks.length <= 0 && styles.list}
+                ListEmptyComponent={() => (
+                    <Text style={styles.listEmptyText}>
+                        Adicione tarefas a sua lista de tarefas
+                    </Text>
+                )}
+            />
         </View>
     )
 }

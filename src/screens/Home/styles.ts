@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
         height: 54,
         padding: 16,
         borderWidth: 0.5,
-        //borderColor: "#808080",
+        borderColor: "#808080",
         borderRadius: 6,
         backgroundColor: "#F9F9F9",
         fontSize: 16,
@@ -48,10 +48,15 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
     },
     list: {
-
+        flex: 1,
+        justifyContent: 'center'
     },
     listEmptyText: {
-        
+        fontSize: 16,
+        fontWeight: 'normal',
+        textAlign: 'center',
+        position: 'relative',
+        top: -100
     }
 
 })
