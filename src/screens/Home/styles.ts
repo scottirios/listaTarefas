@@ -24,11 +24,11 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         position: "relative",
         top: -30,
-        marginBottom: 35
+        marginBottom: 10
     },
     input: {
         flex: 1,
-        maxWidth: 290,
+        maxWidth: 340,
         height: 54,
         padding: 16,
         borderWidth: 0.5,
