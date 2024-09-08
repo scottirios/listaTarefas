@@ -6,14 +6,45 @@ export const styles = StyleSheet.create({
         backgroundColor: '#FFF'
     },
     containerBlue: {
-        height: 220,
+        height: 200,
         backgroundColor: '#1E90FF',
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        flexDirection: "row"
     },
     title: {
         color: '#FFF',
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginRight: 10
+    },
+    containerInput: {
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        position: "relative",
+        top: -30,
+        marginBottom: 35,
+    },
+    input: {
+        flex: 1,
+        maxWidth: 289,
+        height: 54,
+        padding: 16,
+        borderWidth: 0.5,
+        borderColor: "#808080",
+        borderRadius: 6,
+        backgroundColor: "#F2F2F2",
+        fontSize: 16,
+        fontWeight: "400",
+        marginRight: 4
+    },
+    button: {
+        width: 52,
+        height: 52,
+        backgroundColor: "#0000FF",
+        borderRadius: 6,
+        alignItems: "center",
+        justifyContent: "center",
     }
 })
