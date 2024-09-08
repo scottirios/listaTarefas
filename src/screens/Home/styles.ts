@@ -24,17 +24,17 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         position: "relative",
         top: -30,
-        marginBottom: 35,
+        marginBottom: 35
     },
     input: {
         flex: 1,
-        maxWidth: 289,
+        maxWidth: 290,
         height: 54,
         padding: 16,
         borderWidth: 0.5,
-        borderColor: "#808080",
+        //borderColor: "#808080",
         borderRadius: 6,
-        backgroundColor: "#F2F2F2",
+        backgroundColor: "#F9F9F9",
         fontSize: 16,
         fontWeight: "400",
         marginRight: 4
@@ -46,5 +46,12 @@ export const styles = StyleSheet.create({
         borderRadius: 6,
         alignItems: "center",
         justifyContent: "center",
+    },
+    list: {
+
+    },
+    listEmptyText: {
+        
     }
+
 })
