@@ -31,6 +31,14 @@ export function Home() {
       );
     }
 
+    if (taskName.trim().length === 0) {
+      return Alert.alert("Tarefa inválida! ");
+    }
+
+    if (taskQuantity.trim().length === 0) {
+      return Alert.alert("Quantidade inválida! ");
+    }
+
     setTasks((prevState) => [
       ...prevState,
       { name: taskName, quantity: Number(taskQuantity) },
