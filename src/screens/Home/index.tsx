@@ -32,11 +32,11 @@ export function Home() {
     }
 
     if (taskName.trim().length === 0) {
-      return Alert.alert("Tarefa inválida! ");
+      return Alert.alert("Descriçaõ da tarefa inválida! ");
     }
 
     if (taskQuantity.trim().length === 0) {
-      return Alert.alert("Quantidade inválida! ");
+      return Alert.alert("Quantidade para a tarefa inválida! ");
     }
 
     setTasks((prevState) => [
