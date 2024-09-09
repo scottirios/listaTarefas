@@ -9,6 +9,7 @@ import {
 import { styles } from "./styles";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useState } from "react";
 import { Task } from "../../components/Task";
 
@@ -95,9 +96,12 @@ export function Home() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={tasks.length <= 0 && styles.list}
         ListEmptyComponent={() => (
-          <Text style={styles.listEmptyText}>
-            Adicione tarefas a sua lista de tarefas
-          </Text>
+          <View style={styles.emptyContainer}>
+            <FontAwesome name="tasks" size={58} color="black" />
+            <Text style={styles.listEmptyText}>
+              Adicione tarefas a sua lista de tarefas
+            </Text>
+          </View>
         )}
       />
     </View>

@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 type Props = {
   name: string;
@@ -16,7 +16,7 @@ export function Task({ name, quantity, onRemove }: Props) {
       </Text>
 
       <TouchableOpacity style={styles.button} onPress={onRemove}>
-      <FontAwesome name="trash-o" size={20} color="#FFF" />        
+        <FontAwesome name="trash-o" size={20} color="#FFF" />
       </TouchableOpacity>
     </View>
   );

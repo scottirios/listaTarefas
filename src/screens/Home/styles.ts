@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
   button: {
     width: 52,
     height: 52,
-    backgroundColor: "#0000FF",
+    backgroundColor: "#0000CD",
     borderRadius: 6,
     alignItems: "center",
     justifyContent: "center",
@@ -70,5 +70,11 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "400",
     marginRight: 4,
+  },
+  emptyContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column-reverse",
+    marginTop: -200,
   },
 });
